@@ -1,11 +1,12 @@
 #!/bin/bash
 set -ex
 pushd ..
-wget https://curve-tool.nos-eastchina1.126.net/fsthrash/ltp-full-20210524-curve.tar.bz2
-tar -xvf ltp-full-20210524-curve.tar.bz2
-cd ltp-full-20210524
+wget http://172.30.14.127/ltp.tar.gz
+tar -zxvf ltp.tar.gz
+cd ltp
+make autotools
 ./configure
-make all
+make
 sudo make install
 popd
 PWD=$(pwd)

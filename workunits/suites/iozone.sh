@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -e
-wget https://curve-tool.nos-eastchina1.126.net/fsthrash/iozone3_492.tar
+wget http://172.30.14.127/iozone3_492.tar
 tar -xvf iozone3_492.tar
 pushd iozone3_492/src/current
 make linux

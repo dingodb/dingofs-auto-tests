@@ -4,11 +4,15 @@ set -ex
 
 mkdir -p fsstress
 pushd fsstress
-wget -q -O ltp-full.tgz https://curve-tool.nos-eastchina1.126.net/fsthrash/ltp-full-20091231.tgz
-tar xzf ltp-full.tgz
-pushd ltp-full-20091231/testcases/kernel/fs/fsstress
+wget  http://172.30.14.127/ltp.tar.gz
+tar -zxvf ltp.tar.gz
+pushd ltp
+make autotools
+./configure
 make
+pushd testcases/kernel/fs/fsstress
 BIN=$(readlink -f fsstress)
+popd
 popd
 popd
 

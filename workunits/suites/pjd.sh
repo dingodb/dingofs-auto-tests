@@ -2,16 +2,15 @@
 
 set -e
 
-wget https://curve-tool.nos-eastchina1.126.net/fsthrash/pjdtest.tar.gz
-tar zxvf pjdtest.tar.gz
-cd pjdfstest-master
+wget  http://172.30.14.127/pjdfstest.tar.gz
+tar -zxvf pjdfstest.tar.gz
+cd pjdfstest
 autoreconf -ifs
 ./configure
 make pjdfstest
-cd ..
 mkdir tmp
 cd tmp
 # must be root!
-sudo prove -r -v --exec 'bash -x' ../pjdfs*/tests
+sudo prove -r -v --exec 'bash -x' ../tests
 cd ..
-rm -rf tmp pjd*
+sudo rm -rf tmp

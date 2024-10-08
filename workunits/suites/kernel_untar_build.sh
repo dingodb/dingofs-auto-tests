@@ -2,8 +2,9 @@
 
 set -e
 
-wget -O linux.tar.gz https://curve-tool.nos-eastchina1.126.net/fsthrash/linux-5.4.tar.gz
-sudo apt-get install libelf-dev bc -y
+wget -O linux.tar.gz http://172.30.14.127/linux-5.4.tar.gz
+#sudo apt-get install libelf-dev bc -y
+sudo yum install bc -y
 mkdir t
 cd t
 tar xzf ../linux.tar.gz

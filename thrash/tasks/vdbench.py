@@ -64,7 +64,7 @@ def task(ctx, config):
         t.get_result()
 
 def get_vdbench_tool(pkg):
-    cmd = "wget https://curve-tool.nos-eastchina1.126.net/fsthrash/{vdbench} -O {vdbench}".format(vdbench=pkg)
+    cmd = "wget http://172.30.14.127/{vdbench} -O {vdbench}".format(vdbench=pkg)
     misc.sh(cmd)
     cmd = 'tar -xvf {vdbench}'.format(vdbench=pkg)
     misc.sh(cmd)

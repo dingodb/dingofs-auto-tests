@@ -2,10 +2,8 @@
 set -e
 
 echo "getting iogen"
-wget https://curve-tool.nos-eastchina1.126.net/fsthrash/iogen_3.1p0.tar
-sudo apt-get install groff -y
-tar -xvzf iogen_3.1p0.tar
-cd iogen_3.1p0
+git clone https://github.com/shmimura/iogen.git
+cd iogen
 echo "making iogen"
 make
 echo "running iogen"
